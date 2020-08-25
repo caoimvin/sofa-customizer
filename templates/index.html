@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style_home.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar_text">
+        <a id="navbar_title" href="">sofa customizer <span>beta</span></a>
+        <div class="navbar_seccondary">
+          <a href="#services">features</a>
+          <a href="#about">about</a>
+          <a href="/customizer">configurator</a>
+          <a href="#live">live</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="intro">
+        <div class="intro_text">
+          <h1>Create your own <span>unique</span> sofa</h1>
+          <p>You customize, we deliver, everything is aligned to your needs.</p>
+          <a href="/customizer">create now</a>
+        </div>
+        <div class="intro_image">
+          <img src="/static/intro_sofa.png" alt="" />
+        </div>
+      </div>
+
+      <div class="services" id="services">
+        <div class="services_head">
+          <h1>Convince yourself of our offer</h1>
+          <br />
+          <p>
+            We at "Sofa Customizer" deliver many features, see below for more
+            details.
+          </p>
+        </div>
+        <div class="services_div">
+          <div>
+            <i class="fa fa-paint-brush"></i>
+            <h2>Create and Innovate</h2>
+            <p>
+              Design and create your own sofa. Customize it according to your
+              own wishes and enjoy a individual experience.
+            </p>
+          </div>
+          <div>
+            <i class="fa fa-photo"></i>
+            <h2>Discover</h2>
+            <p>
+              Discover your creation directly in the browser. This gives you the
+              opportunity for real-time feedback.
+            </p>
+          </div>
+          <div>
+            <i class="fa fa-rocket"></i>
+            <h2>Fast Delivery</h2>
+            <p>
+              We deliver your sofa within 24 hours, no matter where you live.
+            </p>
+          </div>
+          <div>
+            <i class="fa fa-user"></i>
+            <h2>Customer Support</h2>
+            <p>
+              Our reliable and friendly customer service is alwasy there for you
+              if you need help.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="configurator">
+        <div class="configurator_text">
+          <h1>Make it our own</h1>
+          <p>You customize, we deliver, everything is aligned to your needs.</p>
+          <button><a href="/customizer">create now</a></button>
+        </div>
+        <div class="configurator_image">
+          <img src="/static/front_transparent4.png" alt="" />
+        </div>
+      </div>
+
+      <div class="sample_creations">
+        <img src="/static/front.png" alt="" />
+        <img src="/static/down.png" alt="" />
+        <img src="/static/back.png" alt="" />
+        <img src="/static/side.png" alt="" />
+      </div>
+
+      <div class="web-component" id="live">
+        <div class="services_head">
+          <h1>SEE IT LIVE</h1>
+          <br />
+          <p>
+            Position our sofa model directly in your apartment with the help of
+            augmented reality (AR).
+          </p>
+        </div>
+        <div class="model">
+          <model-viewer
+            id="model-viewer"
+            src="static/sofa_furniture_model.glb"
+            ios-src="static/sofa2.usdc"
+            alt="A 3D model of an mischpult"
+            ar
+            auto-rotate
+            camera-controls
+            background-color="#455A64"
+          >
+            <p>for mobile and iPhone devices only</p>
+          </model-viewer>
+          <img src="/static/liveshow.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="references">
+        <h1>What our customers say about us</h1>
+        <div
+          class="references_carousel main-carousel"
+          data-flickity='{ "autoPlay": 4000 }'
+        >
+          <div class="carousel-cell">
+            <img src="/static/testimonial1.jpg" alt="" />
+            <p>
+              "I can finally design my sofa the way I want it,<br />
+              now the color fits better into the apartment."
+            </p>
+            <h6>Manuel Alvarez<br />Barcelona, Spain</h6>
+            <p class="rating">&#9733; &#9733; &#9733; &#9733;</p>
+          </div>
+          <div class="carousel-cell">
+            <img src="/static/testimonial2.jpg" alt="" />
+            <p>
+              "At first I was skeptical about the quality, but the furniture
+              from <br />
+              SOFA CUSTOMIZER beta have completely convinced me."
+            </p>
+            <h6>Alberto Neumann<br />Hamburg, Germany</h6>
+            <p class="rating">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+          </div>
+          <div class="carousel-cell">
+            <img src="/static/testimonial3.jpg" alt="" />
+            <p>
+              "I am really very happy with the choices that the Configurator
+              offers.<br />
+              The low prices round off the offer in my opinion."
+            </p>
+            <h6>Chen Lu Albers<br />Cologne, Germany</h6>
+            <p class="rating">&#9733; &#9733; &#9733; &#9733;</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer" id="about"></div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
+    <script>
+      var elem = document.querySelector(".main-carousel");
+      var flkty = new Flickity(elem, {
+        cellAlign: "left",
+        contain: true,
+      });
+      var flkty = new Flickity(".main-carousel", {});
+    </script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  </body>
+</html>
